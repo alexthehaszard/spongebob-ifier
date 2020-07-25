@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org/face/some-time-later"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+    <title>Spongebob-ifier</title>
+  </head>
+  <body>
+    <form onsubmit="getSpongebobbed(); return false;">
+      <input type="text" />
+      <button type="button" onclick="getSpongebobbed();">
+        spongebob-ify text! 🧽
+      </button>
+      <p id="response" style="display: none;">waiting for response</p>
+    </form>
+  </body>
+</html>
