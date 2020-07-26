@@ -40,7 +40,7 @@ function spongebobify(input: string): string {
     it is uppercase then the current character has a 75% chance of being
     lowercase and vice versa. basically it just adds variation because being 
     purely random makes some things look too natural. */
-    if (i > 0 && input[i - 1] === input[i - 1].toUpperCase()) {
+    if (i > 0 && input[i - 1] === output[i - 1].toUpperCase()) {
       num = 1;
     }
     let rand = Math.floor(Math.random() * 4);
