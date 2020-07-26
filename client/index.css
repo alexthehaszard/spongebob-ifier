@@ -57,3 +57,7 @@ form input {
   color: white;
   text-align: center;
 }
+
+no-show {
+  display: none;
+}
