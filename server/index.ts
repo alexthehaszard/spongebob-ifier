@@ -1,4 +1,4 @@
-import { Application, Router } from "https://deno.land/x/oak/mod.ts";
+import { Application, Router, send } from "https://deno.land/x/oak/mod.ts";
 
 const app = new Application();
 const router = new Router();
@@ -8,7 +8,7 @@ router
     context.response.headers.set("type", "plain/text");
     context.response.headers.set(
       "Access-Control-Allow-Origin",
-      "*"
+      "http://localhost:8000"
     );
     context.response.body = "no input given!";
   })
@@ -17,7 +17,7 @@ router
       context.response.headers.set("type", "plain/text");
       context.response.headers.set(
         "Access-Control-Allow-Origin",
-        "*"
+        "http://localhost:8000"
       );
       context.response.status = 200;
       const input = context.params.string.toString();
