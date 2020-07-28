@@ -1,4 +1,4 @@
-import { Application, Router, send } from "https://deno.land/x/oak/mod.ts";
+import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
 const app = new Application();
 const router = new Router();
@@ -6,19 +6,13 @@ const router = new Router();
 router
   .get("/", (context) => {
     context.response.headers.set("type", "plain/text");
-    context.response.headers.set(
-      "Access-Control-Allow-Origin",
-      "*"
-    );
+    context.response.headers.set("Access-Control-Allow-Origin", "*");
     context.response.body = "no input given!";
   })
   .get("/:string", (context) => {
     if (context.params.string) {
       context.response.headers.set("type", "plain/text");
-      context.response.headers.set(
-        "Access-Control-Allow-Origin",
-        "*"
-      );
+      context.response.headers.set("Access-Control-Allow-Origin", "*");
       context.response.status = 200;
       const input = context.params.string.toString();
       const output = spongebobify(input);
