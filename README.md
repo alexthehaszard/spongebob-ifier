@@ -22,4 +22,4 @@ It's made with a Deno and typescript backend and an html and ts front end. (this
 
 1. cd into the client folder
 
-2. run a web server using anything you want (i used python cause it's easy) on localhost:8000 (if you want to use a different address you have to change the address in the index.ts file so that it recognises your client)
+2. run a web server using anything you want (i used python cause it's easy) on any port.
