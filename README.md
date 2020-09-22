@@ -16,7 +16,7 @@ It's made with a Deno and typescript backend and an html and ts front end. (this
 
 2. clone the repo on to your local machine
 
-3. cd into the server folder and run command "deno run --allow-web index.ts"
+3. cd into the server folder and run command "deno run --allow-net index.ts"
 
 2: client
 
