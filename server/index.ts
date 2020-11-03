@@ -29,12 +29,12 @@ await app.listen({ port: 5000 });
 function spongebobify(input: string): string {
   let output: string = "";
   for (let i = 0; i < input.length; i++) {
-    let num = 3;
+    let num = i === 0 ? 2 : 3;
     /* what this if statement does is check the previous character and if 
     it is uppercase then the current character has a 75% chance of being
     lowercase and vice versa. basically it just adds variation because being 
     purely random makes some things look too natural. */
-    if (i > 0 && input[i - 1] === output[i - 1].toUpperCase()) {
+    if (i > 0 && output[i - 1] === output[i - 1].toUpperCase()) {
       num = 1;
     }
     let rand = Math.floor(Math.random() * 4);
